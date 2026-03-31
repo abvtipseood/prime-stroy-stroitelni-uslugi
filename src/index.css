@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-brand-dark: #0f172a;
+  --color-brand-accent: #D06464;
+  --color-brand-accent-hover: #B85454;
+}
