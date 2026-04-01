@@ -427,7 +427,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-brand-dark text-lg">Имейл</h4>
-                    <a href="mailto:office@primestroy.bg" className="text-slate-600 hover:text-brand-accent transition-colors">office@primestroy.bg</a>
+                    <a href="mailto:rosensotiroww@gmail.com" className="text-slate-600 hover:text-brand-accent transition-colors">rosensotiroww@gmail.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

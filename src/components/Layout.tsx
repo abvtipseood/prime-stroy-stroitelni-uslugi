@@ -262,7 +262,7 @@ export default function Layout() {
               <h4 className="text-white font-bold mb-6">Контакти</h4>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-brand-accent" /> 0896 441 959</li>
-                <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-brand-accent" /> office@primestroy.bg</li>
+                <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-brand-accent" /> rosensotiroww@gmail.com</li>
                 <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-brand-accent" /> София и региона</li>
               </ul>
             </div>
