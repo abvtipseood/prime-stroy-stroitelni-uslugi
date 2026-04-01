@@ -269,7 +269,7 @@ export default function Layout() {
           </div>
           <div className="pt-8 border-t border-slate-800 text-sm text-center text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
             <p>&copy; {new Date().getFullYear()} PRIME STROY. Всички права запазени.</p>
-            <p>Качество, на което можете да разчитате.</p>
+            <p>Сайта е изработен от <a href="https://www.estudio.bg" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline">estudio.bg</a></p>
           </div>
         </div>
       </footer>

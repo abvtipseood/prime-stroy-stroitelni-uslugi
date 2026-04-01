@@ -34,8 +34,11 @@ export default function Home() {
       <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2831&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop" 
             alt="Строителни работници" 
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-brand-dark/80 mix-blend-multiply"></div>
@@ -125,9 +128,13 @@ export default function Home() {
               className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden group hover:shadow-md transition-shadow flex flex-col"
             >
               <div className="h-48 overflow-hidden relative bg-slate-200">
-                <div className="w-full h-full flex items-center justify-center text-slate-400 group-hover:scale-105 transition-transform duration-500">
-                  <span className="font-medium">Място за снимка</span>
-                </div>
+                <img 
+                  src="https://i.ibb.co/HT1m50XL/image.png" 
+                  alt="Ремонт на покриви" 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
                 <div className="absolute top-4 left-4 w-12 h-12 bg-white rounded-lg flex items-center justify-center text-brand-accent shadow-lg">
                   <Hammer className="w-6 h-6" />
                 </div>
@@ -157,9 +164,13 @@ export default function Home() {
               className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden group hover:shadow-md transition-shadow flex flex-col"
             >
               <div className="h-48 overflow-hidden relative bg-slate-200">
-                <div className="w-full h-full flex items-center justify-center text-slate-400 group-hover:scale-105 transition-transform duration-500">
-                  <span className="font-medium">Място за снимка</span>
-                </div>
+                <img 
+                  src="https://i.ibb.co/qF90Zhj9/image.png" 
+                  alt="Топлоизолация" 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
                 <div className="absolute top-4 left-4 w-12 h-12 bg-white rounded-lg flex items-center justify-center text-brand-accent shadow-lg">
                   <ThermometerSun className="w-6 h-6" />
                 </div>
@@ -191,9 +202,13 @@ export default function Home() {
               className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden group hover:shadow-md transition-shadow flex flex-col"
             >
               <div className="h-48 overflow-hidden relative bg-slate-200">
-                <div className="w-full h-full flex items-center justify-center text-slate-400 group-hover:scale-105 transition-transform duration-500">
-                  <span className="font-medium">Място за снимка</span>
-                </div>
+                <img 
+                  src="https://i.ibb.co/chR8XHX6/image.png" 
+                  alt="Вътрешни ремонти" 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
                 <div className="absolute top-4 left-4 w-12 h-12 bg-white rounded-lg flex items-center justify-center text-brand-accent shadow-lg">
                   <PaintRoller className="w-6 h-6" />
                 </div>
@@ -223,9 +238,13 @@ export default function Home() {
               className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden group hover:shadow-md transition-shadow flex flex-col"
             >
               <div className="h-48 overflow-hidden relative bg-slate-200">
-                <div className="w-full h-full flex items-center justify-center text-slate-400 group-hover:scale-105 transition-transform duration-500">
-                  <span className="font-medium">Място за снимка</span>
-                </div>
+                <img 
+                  src="https://i.ibb.co/wZ64kKw8/image.png" 
+                  alt="Хидроизолация" 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
                 <div className="absolute top-4 left-4 w-12 h-12 bg-white rounded-lg flex items-center justify-center text-brand-accent shadow-lg">
                   <Droplets className="w-6 h-6" />
                 </div>
@@ -307,7 +326,14 @@ export default function Home() {
             ref={galleryRef}
             className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 overflow-x-auto snap-x snap-mandatory pb-6 sm:pb-0 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           >
-            {[1, 2, 3, 4, 5, 6].map((_, i) => (
+            {[
+              'https://i.ibb.co/5X0vKLDL/image.png',
+              'https://i.ibb.co/mZkvb2z/image.png',
+              'https://i.ibb.co/pvR1cr3K/image.png',
+              'https://i.ibb.co/GvsX2kjG/image.png',
+              'https://i.ibb.co/zhzqcsrH/image.png',
+              'https://i.ibb.co/nsj9fWP9/image.png'
+            ].map((imgUrl, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0 }}
@@ -316,7 +342,13 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 className="w-[85vw] sm:w-auto shrink-0 snap-center aspect-square overflow-hidden rounded-lg group relative cursor-pointer bg-slate-200 flex items-center justify-center"
               >
-                <span className="text-slate-400 font-medium group-hover:scale-110 transition-transform duration-500">Място за снимка</span>
+                <img 
+                  src={imgUrl} 
+                  alt={`Галерия снимка ${i + 1}`} 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
                 <div className="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="text-white font-medium border border-white px-4 py-2 rounded-md">Виж повече</span>
                 </div>

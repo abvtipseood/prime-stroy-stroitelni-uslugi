@@ -7,9 +7,14 @@ export default function ServiceWaterproofing() {
       {/* Hero */}
       <div className="bg-brand-dark text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
-          <div className="w-full h-full bg-slate-200 flex items-center justify-center text-slate-400">
-            <span className="font-medium text-lg">Място за снимка</span>
-          </div>
+          <img 
+            src="https://i.ibb.co/wZ64kKw8/image.png" 
+            alt="Хидроизолация" 
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex items-center gap-4 mb-6">
